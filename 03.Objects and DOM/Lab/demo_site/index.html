@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo-Site</title>
+</head>
+
+<body>
+    <h1 id="head1">Hello family`s</h1>
+    <ul class="first-list">
+        <li >Boris-Mihail</li>
+        <li>Nikol</li>
+        <li>Milena</li>
+        <li class="father">Nikolay</li>
+    </ul>
+    <button onclick="onHelloClick()">Click</button>
+    <script>
+
+        function onHelloClick() {
+            let messageElement = document.getElementById('head1');
+            messageElement.innerHTML += ' Kolevy';
+            messageElement.style.backgroundColor = 'pink';
+            let liElement = document.getElementsByTagName('li')[0];
+            let secomdElement = document.getElementsByTagName('li')[1,2];
+            secomdElement.innerHTML += ' Koleva';
+            secomdElement.style.backgroundColor = 'pink';
+            secomdElement.style.color = 'white';
+            liElement.innerHTML += ' Kolev';
+            liElement.style.color = 'green';
+            liElement.style.backgroundColor = 'lightblue';
+            let removedElement = getElementsByTagName('li')[3];
+            document.body.removeChild(removedElement);
+            console.log(liElement);
+            console.log(messageElement);
+        }
+    </script>
+
+</body>
+
+</html>
